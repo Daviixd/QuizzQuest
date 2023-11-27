@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  padding-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background: #ec362d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+}
+
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+.overlay__texto {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  color: #ec362d;
+}
+
+.page1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 146px 18px 0;
+  height: 100%;
+}
+
+/* rever max-width, no figma tá 1051px, mas da problema com margin do .quizz */
+.quiz {
+  width: 100%;
+  max-width: 1070px;
+}
+.quiz h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.quiz--novo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px dashed #d5d5d5;
+  border-radius: 5px;
+  margin-bottom: 76px;
+  height: 181px;
+  background: #fafafa;
+}
+.quiz--novo p {
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #b9b9b9;
+}
+.quiz--novo .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ec362d;
+  border-radius: 50px;
+  height: 40px;
+  width: 151px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ec362d;
+  cursor: pointer;
+}
+h1 {
+  cursor: pointer;
+}
+
+.quiz--usuario {
+  margin-bottom: 48px;
+}
+.quiz--usuario .cabecalho {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.cabecalho ion-icon {
+  border-radius: 500px;
+  margin-left: 18px;
+  font-size: 30px;
+  color: #ec362d;
+  cursor: pointer;
+}
+
+.quiz__lista {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.quizz {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 12px 14px 0 0;
+  height: 181px;
+  width: 100%;
+  max-width: 340px;
+  cursor: pointer;
+}
+.quizz img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.quizz-configuracao {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px 0px 0px 11px;
+  height: 88px;
+  width: 44px;
+  background-color: #ec362d;
+}
+.quizz-configuracao ion-icon {
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.quizz .gradiente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 64.58%,
+    #000000 100%
+  );
+  border-radius: 5px;
+}
+.quizz h3 {
+  z-index: 1;
+  position: absolute;
+  bottom: 8px;
+  word-wrap: break-word;
+  width: 90%;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .page1 {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .quiz {
+    justify-content: center;
+  }
+  .quiz--novo {
+    margin-bottom: 36px;
+  }
+  .quiz--usuario {
+    margin-bottom: 38px;
+  }
+  .quiz--usuario .cabecalho {
+    justify-content: space-between;
+  }
+  .quiz__lista {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 745px) {
+  .quizz {
+    margin: 12px 0 0;
+  }
+}
