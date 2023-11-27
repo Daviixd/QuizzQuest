@@ -93,7 +93,7 @@ function renderizarQuizzesTodos() {
 
 function renderizarTelaDeCarregamento() {
   body.innerHTML = `
-        <header><h1>BuzzQuizz</h1></header>
+       <header><img  onclick="carregarPagina1"src="/quiz.png" class="logo" alt="Logo do quiz"></header>
         <div class="overlay">
             <img src="spinner.gif" alt="gif de spinner">
             <p class="overlay__texto">Carregando</p> 
